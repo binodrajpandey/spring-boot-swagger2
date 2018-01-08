@@ -24,7 +24,8 @@ public class SpringBootSwaggerApplication {
                 //which provides a way to control the endpoints exposed by Swagger.
           .select()                                  
           .apis(RequestHandlerSelectors.any())              
-          .paths(PathSelectors.any())                          
+         // .paths(PathSelectors.any()) 
+                .paths(PathSelectors.ant("/students/**"))
           .build();                                           
     }
 }
