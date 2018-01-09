@@ -3,6 +3,8 @@ package com.example.demo.controllers;
 import com.example.demo.entities.Department;
 import com.example.demo.repositories.DepartmentRepository;
 import com.example.demo.services.DepartmentService;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
 import java.util.List;
 import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,7 +42,12 @@ public class DepartmentController {
                 .map(d->d.getDepartmentName())
                 .collect(Collectors.toList());
     }
-    
+    @ApiImplicitParams({
+         @ApiImplicitParam(name = "departmentId",required = false,value = "1"),
+         @ApiImplicitParam(name = "departmentName",required = true,value = "civil")
+    })
+   
+   
      @PostMapping(value = "/departments")
     public ResponseEntity<?> saveDepartment(@RequestBody Department department){
 //         vehicleInfoValidator.validate(toSave, errors);
