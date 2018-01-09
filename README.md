@@ -8,7 +8,7 @@
 In our case, Browse to <br/>
 `http://localhost:8086/swagger-ui.html#/`
 5. If you have spring security in your apps, allow permission for given list of endpoints
- `- /swagger-resources/**`
- ` - /swagger-ui.html`
- ` - /v2/api-docs`
- ` - /webjars/**`
+ `- /swagger-resources/**` <br/>
+ ` - /swagger-ui.html`<br/>
+ ` - /v2/api-docs`<br/>
+ ` - /webjars/**`<br/>
